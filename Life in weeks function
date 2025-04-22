@@ -1,0 +1,17 @@
+# Create a function to calculate how many weeks until we are 90 years old.
+# First we need to find out the user age.
+name = input("What is you name?/n")
+age = input("How old are you/n")
+weeks = 52
+user_age_in_weeks = age * weeks
+ninety_years_in_weeks = 90 * weeks
+user_is_ninety = int(ninety_years_in_weeks) - int(user_age_in_weeks)
+
+
+def life_in_weeks():
+    print(f"Hello {name}")
+    print(f"How old are you? {age}")
+    print(f"You will be 90 in {user_is_ninety} weeks")
+
+
+life_in_weeks()
