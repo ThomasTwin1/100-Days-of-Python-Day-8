@@ -1,0 +1,17 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+def encrypt(original_text, shift_amount):
+    encrypted_text = ""
+    for letter in original_text:
+        if letter in alphabet:
+            # Find the position of the letter and apply the shift
+            position = alphabet.index(letter)
+            new_position = (position + shift_amount) % len(alphabet)  # Modulo to prevent out of range
+            encrypted_text += alphabet[new_position]
+        else:
+            # Keep non-alphabet characters as they are
+            encrypted_text += letter
+    print(f"The encoded text is: {encrypted_text}")
+
+# Example usage
+encrypt("hello", 20)  # Encodes the message "hello" with a shift of 20
